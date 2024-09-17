@@ -63,7 +63,7 @@
                 <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html"> About</a>
+                <a class="nav-link" href="{% url 'about' %}"> About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="departments.html">Departments</a>
@@ -601,10 +601,10 @@
               Links
             </h4>
             <div class="footer_links">
-              <a class="active" href="index.html">
+              <a class="active" href="{% url 'index' %}">
                 Home
               </a>
-              <a class="" href="about.html">
+              <a class="" href="{% url 'about' %}">
                 About
               </a>
               <a class="" href="departments.html">
