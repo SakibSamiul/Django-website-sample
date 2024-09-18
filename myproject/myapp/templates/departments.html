@@ -14,7 +14,7 @@
   <meta name="author" content="" />
   <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="">
 
-  <title> Orthoc </title>
+  <title> Sakib </title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
@@ -23,7 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css}" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
   <!-- font awesome style -->
   <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
@@ -38,6 +38,11 @@
 <body class="sub_page">
 
   <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <img src="{% static 'images/hero-bg.png' %}" alt="">
+    </div>
+
     <!-- header section strats -->
     <header class="header_section">
       <div class="container">
@@ -57,11 +62,11 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'index' %}">Home </a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="{% url 'about' %}"> About <span class="sr-only">(current)</span> </a>
-              </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'departments' %}">Departments</a>
+                <a class="nav-link" href="{% url 'about' %}"> About</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'departments' %}">Departments <span class="sr-only">(current)</span> </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="doctors.html">Doctors</a>
@@ -82,39 +87,91 @@
     <!-- end header section -->
   </div>
 
-  <!-- about section -->
+  <!-- department section -->
 
-  <section class="about_section layout_padding">
-    <div class="container  ">
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="{% static 'images/about-img.jpg' %}" alt="">
+  <section class="department_section layout_padding">
+    <div class="department_container">
+      <div class="container ">
+        <div class="heading_container heading_center">
+          <h2>
+            Our Departments
+          </h2>
+          <p>
+            Asperiores sunt consectetur impedit nulla molestiae delectus repellat laborum dolores doloremque accusantium
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/s1.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Cardiology
+                </h5>
+                <p>
+                  fact that a reader will be distracted by the readable page when looking at its layout.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/s2.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Diagnosis
+                </h5>
+                <p>
+                  fact that a reader will be distracted by the readable page when looking at its layout.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/s3.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Surgery
+                </h5>
+                <p>
+                  fact that a reader will be distracted by the readable page when looking at its layout.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/s4.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  First Aid
+                </h5>
+                <p>
+                  fact that a reader will be distracted by the readable page when looking at its layout.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                About <span>Us</span>
-              </h2>
-            </div>
-            <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
+        <div class="btn-box">
+          <a href="">
+            View All
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- end about section -->
+  <!-- end department section -->
 
   <!-- footer section -->
   <footer class="footer_section">
@@ -180,10 +237,10 @@
               <a class="" href="{% url 'index' %}">
                 Home
               </a>
-              <a class="active" href="{% url 'about' %}">
+              <a class="" href="{% url 'about' %}">
                 About
               </a>
-              <a class="" href="departments.html">
+              <a class="active" href="{% url 'departments' %}">
                 Departments
               </a>
               <a class="" href="doctors.html">
