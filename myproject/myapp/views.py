@@ -9,3 +9,6 @@ def About(request):
 
 def Departments(request):
     return render(request, 'departments.html')
+
+def Doctors(request):
+    return render(request, 'doctors.html')
