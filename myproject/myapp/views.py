@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . models import ABOUT, DOCTORS
+from . models import ABOUT, DOCTORS, DEPARTMENTS
 
 # Create your views here.
 def Index(request):
@@ -10,7 +10,8 @@ def About(request):
     return render(request, 'about.html', {'about':about})
 
 def Departments(request):
-    return render(request, 'departments.html')
+    departments = DEPARTMENTS.objects.all()
+    return render(request, 'departments.html', {'departments': departments})
 
 def Doctors(request):
     doctors = DOCTORS.objects.all()
