@@ -67,7 +67,7 @@
                 <a class="nav-link" href="{% url 'doctors' %}">Doctors</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
               </li>
               <form class="form-inline">
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
@@ -104,10 +104,7 @@
               in some form, by injected humour, or randomised words which don't look even slightly believable. If you
               are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
               the middle of text. All
-            </p>
-            <a href="">
-              Read More
-            </a>
+            </p>        
           </div>
         </div>
       </div>
@@ -183,13 +180,13 @@
               <a class="active" href="{% url 'about' %}">
                 About
               </a>
-              <a class="" href="departments.html">
+              <a class="" href="{% url 'departments' %}">
                 Departments
               </a>
-              <a class="" href="doctors.html">
+              <a class="" href="{% url 'doctors' %}">
                 Doctors
               </a>
-              <a class="" href="contact.html">
+              <a class="" href="{% url 'contact' %}">
                 Contact Us
               </a>
             </div>
