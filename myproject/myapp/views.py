@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from . models import ABOUT, DOCTORS, DEPARTMENTS, CONTACT
+from django.shortcuts import render, redirect
+from .forms import *
+from . models import *
 
 # Create your views here.
 def Index(request):
@@ -18,4 +19,10 @@ def Doctors(request):
     return render(request, 'doctors.html', {'doctors':doctors})
 
 def Contact(request):
-    return render(request, 'contact.html')
+    form = ContactForm(request.POST)
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    return render(request, 'contact.html', {'form':form})
