@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . models import ABOUT, DOCTORS, DEPARTMENTS
+from . models import ABOUT, DOCTORS, DEPARTMENTS, CONTACT
 
 # Create your views here.
 def Index(request):

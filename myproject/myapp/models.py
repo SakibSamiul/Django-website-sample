@@ -23,3 +23,12 @@ class DOCTORS(models.Model):
 
     def __str__(self):
         return self.name
+    
+class CONTACT(models.Model):
+    name = models.CharField(max_length=100)
+    phone = models.IntegerField()
+    email = models.ImageField()
+    message = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.name
